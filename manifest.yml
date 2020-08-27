@@ -1,0 +1,14 @@
+---
+applications:
+  - name: client-server
+    path: ./target/oauth2-client-0.0.1-SNAPSHOT.jar
+    services:
+    routes:
+      - route: client-server.apps.dhccloud.com.cn
+    env:
+      SPRING_PROFILES_ACTIVE: dev
+      MYSQL_HOST: 'q-n3s3y1.q-g19185.bosh'
+      MYSQL_USER: '8233ae6f4b78450db80a709f5fbdbdb1'
+      MYSQL_PWD: 'drz9iewj00dedusu'
+      ROUTE: 'client-server.apps.dhccloud.com.cn'
+      ISSURE_URI: 'identity-server.apps.dhccloud.com.cn/auth/realms/demo'

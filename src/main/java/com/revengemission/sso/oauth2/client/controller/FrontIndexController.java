@@ -49,7 +49,7 @@ public class FrontIndexController {
                            OAuth2AuthenticationToken oAuth2AuthenticationToken,
                            @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
                            Model model) {
-        String url = "http://localhost:10580/coupon/list";
+        String url = "https://resource-server.apps.dhccloud.com.cn/coupon/list";
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Bearer " + authorizedClient.getAccessToken().getTokenValue());
         ResponseEntity<Object> response = restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<>(headers), Object.class);
